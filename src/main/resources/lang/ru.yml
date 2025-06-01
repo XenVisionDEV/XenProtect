@@ -1,0 +1,10 @@
+no-permission:
+  - "&cУ вас нет прав!"
+claim-created:
+  - "&aПриват создан!"
+  - "&7Владелец: &f%owner%"
+claim-info:
+  - "&eИнформация о привате:"
+  - "&7Владелец: &f%owner%"
+  - "&7Уровень: &f%level%"
+  - "&7Прочность: &f%durability% &7/ &f%max_durability%"

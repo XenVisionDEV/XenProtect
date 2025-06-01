@@ -1,0 +1,18 @@
+name: XenProtect
+version: '${project.version}'
+main: net.xenvision.xenprotect.XenProtect
+api-version: '1.16'
+authors: [XenVision]
+description: Уникальная система приватов с голограммами и кастомизацией.
+commands:
+  xenprotect:
+    description: Основная команда управления приватами
+    aliases: [xenp, xp]
+    usage: /<command> help
+permissions:
+  xenprotect.admin:
+    description: Полные права администратора XenProtect
+    default: op
+  xenprotect.use:
+    description: Базовые права на использование плагина
+    default: true

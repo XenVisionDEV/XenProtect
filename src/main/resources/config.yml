@@ -1,0 +1,37 @@
+claims:
+  iron_block:
+    radius: 11
+    durability: 100
+  gold_block:
+    radius: 15
+    durability: 200
+  diamond_block:
+    radius: 21
+    durability: 350
+  netherite_block:
+    radius: 27
+    durability: 500
+  ancient_debris:
+    radius: 35
+    durability: 750
+
+limits:
+  default:
+    permission: ""            # Пусто — для всех без специальных прав
+    count: 1
+  vip:
+    permission: "group.vip"
+    count: 3
+  premium:
+    permission: "xenprotect.limit.premium"
+    count: 5
+  titan:
+    permission: "server.titan"
+    count: 10
+
+borders:
+  show_duration: 30
+
+holograms:
+  enabled: true
+  show_owner: true
