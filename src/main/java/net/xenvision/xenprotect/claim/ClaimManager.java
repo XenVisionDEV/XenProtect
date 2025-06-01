@@ -9,12 +9,19 @@ import java.util.*;
 
 public class ClaimManager {
     private final XenProtect plugin;
+    private final ClaimStorage storage;
     private final Map<UUID, List<ClaimRegion>> claimsByOwner = new HashMap<>();
     private final List<ClaimRegion> allClaims = new ArrayList<>();
 
-
     public ClaimManager(XenProtect plugin) {
         this.plugin = plugin;
+        this.storage = new ClaimStorage(plugin);
+
+        // Загрузка приватных регионов из файла при инициализации
+        List<ClaimRegion> loadedClaims = storage.load();
+        for (ClaimRegion claim : loadedClaims) {
+            addClaim(claim);
+        }
     }
 
     public void addClaim(ClaimRegion claim) {
@@ -62,5 +69,9 @@ public class ClaimManager {
 
     public List<ClaimRegion> getAllClaims() {
         return Collections.unmodifiableList(allClaims);
+    }
+
+    public void saveAll() {
+        storage.save(allClaims);
     }
 }

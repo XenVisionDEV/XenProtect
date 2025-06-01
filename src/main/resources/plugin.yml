@@ -7,8 +7,8 @@ description: Уникальная система приватов с голог�
 commands:
   xenprotect:
     description: Основная команда управления приватами
-    aliases: [xenp, xp]
-    usage: /<command> help
+    aliases: [xpro, xprotect]
+    usage: /<command> [borders|...]
 permissions:
   xenprotect.admin:
     description: Полные права администратора XenProtect

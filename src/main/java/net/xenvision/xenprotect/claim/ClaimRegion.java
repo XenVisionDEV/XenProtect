@@ -1,6 +1,5 @@
 package net.xenvision.xenprotect.claim;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 
 import java.util.*;
@@ -37,6 +36,7 @@ public class ClaimRegion {
     public String getBlockType() { return blockType; }
     public int getDurability() { return durability; }
     public int getMaxDurability() { return maxDurability; }
+    public void setDurability(int durability) { this.durability = durability; }
 
     public Set<UUID> getCoOwners() { return coOwners; }
     public Set<UUID> getMembers() { return members; }

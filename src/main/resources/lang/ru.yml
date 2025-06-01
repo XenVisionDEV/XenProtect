@@ -1,3 +1,5 @@
+claim-removed:
+  - "&cПриват удалён!"
 no-permission:
   - "&cУ вас нет прав!"
 claim-created:

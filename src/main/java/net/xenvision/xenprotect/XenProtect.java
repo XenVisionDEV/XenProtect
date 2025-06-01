@@ -1,9 +1,11 @@
 package net.xenvision.xenprotect;
 
-import net.xenvision.xenprotect.listener.BlockPlaceListener;
+import net.xenvision.xenprotect.commands.BordersCommand;
+import net.xenvision.xenprotect.listeners.BlockPlaceListener;
 import net.xenvision.xenprotect.claim.ClaimManager;
 import net.xenvision.xenprotect.config.ConfigManager;
 import net.xenvision.xenprotect.lang.LangManager;
+import net.xenvision.xenprotect.listeners.BlockBreakListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class XenProtect extends JavaPlugin {
@@ -20,7 +22,10 @@ public class XenProtect extends JavaPlugin {
         claimManager = new ClaimManager(this);
         langManager = new LangManager(this, "ru"); // Можно добавить выбор языка через config.yml
 
+        getCommand("xenprotect").setExecutor(new BordersCommand(this));
+
         getServer().getPluginManager().registerEvents(new BlockPlaceListener(this), this);
+        getServer().getPluginManager().registerEvents(new BlockBreakListener(this), this);
 
         getLogger().info("XenProtect enabled!");
     }

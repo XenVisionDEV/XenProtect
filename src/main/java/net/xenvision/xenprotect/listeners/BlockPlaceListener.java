@@ -1,9 +1,8 @@
-package net.xenvision.xenprotect.listener;
+package net.xenvision.xenprotect.listeners;
 
 import net.xenvision.xenprotect.XenProtect;
 import net.xenvision.xenprotect.claim.ClaimManager;
 import net.xenvision.xenprotect.claim.ClaimRegion;
-import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
